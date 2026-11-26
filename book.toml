@@ -2,7 +2,7 @@
 title = "Earthmania"
 authors = ["nordmu"]
 language = "en"
-description = "A living, non-academic field guide to sustainability and how everyday materials and systems work."
+description = "A connected, non-academic knowledge base on how materials, industrial processes and systems actually work."
 src = "src"
 
 [build]
@@ -14,7 +14,6 @@ cname = "earthmania.org"
 site-url = "/"
 git-repository-url = "https://github.com/buerlino/earthmania"
 git-repository-icon = "fab-github"
-edit-url-template = "https://github.com/buerlino/earthmania/edit/main/{path}"
 default-theme = "light"
 preferred-dark-theme = "navy"
 

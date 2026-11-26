@@ -32,7 +32,7 @@ is credited on the page where it appears.
 --------------------------------------
 
 All repository configuration, scripts, and workflows (including but not
-limited to `book.toml`, `.github/`, `.gitignore`, `_template.md`, and any
+limited to `book.toml`, `.github/`, `.gitignore`, `scripts/`, and any
 build or helper scripts) are licensed under the MIT License:
 
   MIT License
@@ -56,3 +56,16 @@ build or helper scripts) are licensed under the MIT License:
   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   SOFTWARE.
+
+
+3. Documentation and data
+-------------------------
+
+Project documentation (`CLAUDE.md`, `EDITORIAL.md`, `_guidelines.md`, `README.md`,
+`docs/`) and the source and claims ledger in `data/` are licensed under CC BY-SA 4.0,
+like the content in `src/`.
+
+Exception: short quoted excerpts from third-party sources recorded in `data/`
+(the `quote` fields) remain the property of their respective rights holders. They
+are included only to make each claim verifiable against its source, are not
+licensed under CC BY-SA 4.0, and must not be reused beyond that purpose.

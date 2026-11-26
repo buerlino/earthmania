@@ -1,74 +1,106 @@
-# PET Plastic (Polyethylene Terephthalate)
+<!-- status: draft -->
 
-> **Status:** Draft · **Last updated:** YYYY-MM-DD
-
-<!-- Cite inline with footnotes, e.g. "...about 30% of global PET demand.[^1]" -->
-
-## Overview / What It Is
-
-<!-- 2–4 sentences: what PET is, resin code #1, why it matters. -->
-
-**Also known as:** PETE, polyester, resin identification code ♳ (#1)
-**Category:** Thermoplastic polymer (polyester family)
-
-## How It's Made
-
-<!-- Raw inputs, key processing steps, notable energy/water/chemical inputs. -->
-
-- **Raw materials:**
-- **Key processes:**
-- **Notable inputs / impacts:**
-
-## Common Uses
-
-<!-- Where people encounter it day to day. -->
-
--
--
--
-
-## Where It Accumulates
-
-<!-- Where it ends up after use: landfill, oceans, soils, air, bodies, etc. -->
-
--
-
-## Recycling & End-of-Life
-
-<!-- Realistic recovery routes, recycling rates, limitations, what actually happens. -->
-
-- **Recyclability:**
-- **Typical recycling rate:**
-- **Recycling process:**
-- **Other end-of-life routes:**
-
-## Trade-offs & Alternatives
-
-<!-- Honest comparisons. Note where an alternative is better and where it isn't. -->
-
-| Alternative | Advantages | Drawbacks |
-|-------------|------------|-----------|
-|             |            |           |
-
-## Sources & CC Attribution
+# PET (Polyethylene Terephthalate)
 
 <!--
-  Reference format:
-    [^n]: Author/Organisation. (Publication date). *Title*. Publisher. URL (accessed YYYY-MM-DD)
-
-  Reused openly licensed material (images, text, data) — TASL format:
-    "Title" by Author, Source (URL), licensed under License (URL).
-    Note any changes, e.g. "Cropped and recoloured from original."
+  SKELETON: research questions, not content.
+  - Every point is an OPEN QUESTION for the research agent. Nothing here is a fact.
+  - Lines marked "Lead (unverified, from memory)" are hypotheses to test, not to
+    confirm: the dossier must say whether sources support, contradict or nuance them.
+  - "→ path" names a candidate neighbour page. In written prose, use the planned
+    marker from _guidelines.md until the page is published.
+  - No numbers, dates or quotes appear here on purpose. Delete each comment once
+    its section is written and verified.
 -->
 
-### References
+One or two plain sentences: what PET is and where people meet it.
 
-[^1]: Author/Organisation. (YYYY-MM-DD). *Title*. Publisher. <https://example.org> (accessed YYYY-MM-DD)
+## What PET physically is
 
-### Attribution (TASL)
+<!--
+  - What is PET chemically? Which building blocks is it made from?
+    Lead (unverified, from memory): a polyester from an aromatic diacid and a diol.
+    → materials/polymers.md, plus pages for each building block.
+  - How does chain length relate to strength and processability, and how is
+    chain length measured in practice? Do different products need different grades?
+  - What crystalline vs. amorphous states can PET take, and how do processing,
+    stretching and heat change them? How does this relate to clarity and strength?
+  - Which properties make it suitable for packaging, and where do they reach
+    their limits (temperature, gas permeability, contents)?
+-->
 
-- **Title:** "…"
-  **Author:** …
-  **Source:** <https://…>
-  **License:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
-  **Changes:** None / describe modifications
+## How it is made
+
+<!--
+  - What are the feedstocks of the building blocks, and from which raw materials?
+    Are bio-based routes in commercial use, and at what scale (sourced only)?
+    → systems/petrochemical-feedstocks.md
+  - Which polymerisation process(es) join the building blocks? Which catalysts and
+    by-products are involved? → processes/polycondensation.md
+  - Is a further step used to raise chain length for some grades? What does it do?
+    → processes/solid-state-polymerisation.md
+  - How are bottles, fibres, film and sheet formed from the resin?
+    → processes/stretch-blow-moulding.md, processes/melt-spinning.md
+-->
+
+## Transformations and flows
+
+<!--
+  - What are the main product types made from PET, and how does production split
+    between them (sourced only)? → materials/polyester-textiles.md
+  - After use: which collection routes exist (deposit systems, separate collection,
+    mixed waste), and how do outcomes differ by route and region?
+    → systems/waste-collection.md, systems/deposit-return-systems.md
+  - What are the possible fates: back into the same product, into a different
+    product, incineration, landfill, leakage into the environment? Which shares are
+    known, for which regions and years, and under which definitions?
+  - How is PET identified and separated from other materials in sorting?
+    → processes/plastic-sorting.md
+-->
+
+## Bottlenecks and impacts
+
+<!--
+  Mechanical recycling → processes/mechanical-recycling.md
+  - What happens to PET's chains during melt reprocessing? Does quality change with
+    repeated cycles, and what drives it?
+    Lead (unverified, from memory): chain breakage, worsened by moisture (hydrolysis).
+  - Can lost chain length be restored in recyclate, and with what limits?
+  - Which contaminants matter, and why are they hard to remove?
+    Lead (unverified, from memory): other polymers, labels and adhesives,
+    colourants, opaque additives, multilayer barrier bottles.
+  - What is required for recycled PET to be approved for food contact?
+    → processes/food-contact-decontamination.md
+  - Which substances can form or migrate from PET in use, and what does the
+    evidence say about them? Lead (unverified, from memory): acetaldehyde.
+
+  Open-loop recycling (into other products)
+  - Where does recycled bottle PET go when it does not return to bottles, how large
+    is each route (sourced only), and why?
+  - What happens to those products at end of life? Can textiles return to bottles?
+  - Do polyester textiles shed fibres in use and washing? What is known about their
+    fate? → impacts/microplastics.md
+
+  Chemical recycling → processes/chemical-recycling.md
+  - Which depolymerisation routes exist, what inputs can each handle, and where
+    does each stand industrially (pilot, commercial, sourced only)?
+
+  In the environment
+  - How persistent is PET in different environments, how does it fragment, and
+    where does it accumulate? → impacts/plastic-in-the-ocean.md
+  - What is and is not known about additives and residues in PET?
+-->
+
+## Sources
+
+<!-- Footnotes go here. Format: see _guidelines.md, "Sources and attribution block". -->
+
+## Attribution
+
+<!-- Only if anything is copied or adapted (CC0, PD, CC BY, CC BY-SA only).
+     Format: see _guidelines.md. Delete this section if nothing is reused. -->
+
+---
+
+<!-- SPDX-License-Identifier: CC-BY-SA-4.0 -->
+*This page is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*

@@ -1,7 +1,7 @@
 # Earthmania
 
-A living, non-academic field guide to sustainability and how everyday materials
-and systems work. Built with [mdBook](https://rust-lang.github.io/mdBook/).
+A connected, non-academic knowledge base on how materials, industrial processes
+and systems actually work. Built with [mdBook](https://rust-lang.github.io/mdBook/).
 
 📖 **Read it at [earthmania.org](https://earthmania.org)**
 
@@ -21,9 +21,9 @@ and systems work. Built with [mdBook](https://rust-lang.github.io/mdBook/).
 
 ## Adding a page
 
-1. Copy `_template.md` to `src/<section>/<slug>.md`.
-2. Add the page to `src/SUMMARY.md`.
-3. Fill in each section and list your sources with access dates.
+1. Read `_guidelines.md` (editorial compass, Markdown conventions, attribution block).
+2. Create `src/<materials|processes|impacts|systems>/<slug>.md` as a draft.
+3. Add it to `src/SUMMARY.md` only once every claim has been verified (see `EDITORIAL.md`).
 
 Pushes to `main` are built and deployed to GitHub Pages automatically
 (see `.github/workflows/mdbook.yml`).

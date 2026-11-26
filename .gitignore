@@ -25,3 +25,6 @@ Desktop.ini
 *.sublime-project
 *.sublime-workspace
 .history/
+
+# Local reference material, never committed
+/docs/pollination/
