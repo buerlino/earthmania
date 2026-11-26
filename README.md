@@ -1,3 +1,5 @@
+<p align="center"><img src="logo/earthmania.svg" alt="Earthmania logo: a globe with the letters EM" width="160"></p>
+
 # Earthmania
 
 A connected, non-academic knowledge base on how materials, industrial processes

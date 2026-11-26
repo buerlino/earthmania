@@ -28,3 +28,6 @@ Desktop.ini
 
 # Local reference material, never committed
 /docs/pollination/
+
+# Logo design source (kept local)
+/logo/*.afdesign

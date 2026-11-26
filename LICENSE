@@ -69,3 +69,14 @@ Exception: short quoted excerpts from third-party sources recorded in `data/`
 (the `quote` fields) remain the property of their respective rights holders. They
 are included only to make each claim verifiable against its source, are not
 licensed under CC BY-SA 4.0, and must not be reused beyond that purpose.
+
+
+4. Name and logo
+----------------
+
+The name "Earthmania" and the Earthmania logo (the files in `logo/`,
+`src/images/logo.svg`, `theme/favicon.svg` and `theme/favicon.png`) are not
+licensed under CC BY-SA 4.0 or the MIT License. All rights reserved.
+You may use them unmodified to refer to or link to Earthmania. Adaptations of
+the content must not use them in a way that suggests they are Earthmania or are
+endorsed by it.

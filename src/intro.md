@@ -1,3 +1,5 @@
+<p align="center"><img src="images/logo.svg" alt="Earthmania logo: a globe with the letters EM" width="160"></p>
+
 # Welcome to Earthmania
 
 **Earthmania** is a growing, connected knowledge base on how materials, industrial
