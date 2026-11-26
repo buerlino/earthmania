@@ -1,0 +1,29 @@
+[book]
+title = "Earthmania"
+authors = ["nordmu"]
+language = "en"
+description = "A living, non-academic field guide to sustainability and how everyday materials and systems work."
+src = "src"
+
+[build]
+build-dir = "book"
+create-missing = false
+
+[output.html]
+cname = "earthmania.org"
+site-url = "/"
+git-repository-url = "https://github.com/buerlino/earthmania"
+git-repository-icon = "fab-github"
+edit-url-template = "https://github.com/buerlino/earthmania/edit/main/{path}"
+default-theme = "light"
+preferred-dark-theme = "navy"
+
+[output.html.search]
+enable = true
+limit-results = 30
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 1
+boost-paragraph = 1
+expand = true
+heading-split-level = 3
