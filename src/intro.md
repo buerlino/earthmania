@@ -21,12 +21,17 @@ Each entry follows the same structure, so you always know where to look:
 6. **Trade-offs & Alternatives** — honest comparisons, no greenwashing
 7. **Sources & Attribution** — where the information came from
 
-## Open-source synthesis
+## Our approach
 
-Earthmania is built in the open. Its pages synthesise publicly available research,
-government and industry data, and openly licensed material into readable summaries.
-Every claim should be traceable to a listed source, and reused material is credited
-using the TASL format (Title, Author, Source, License).
+Earthmania grows slowly on purpose. The goal is a small but solid knowledge base
+that you can trust, not a huge one built quickly. Every page is written by a human
+and checked claim by claim against its sources before it is published. Numbers
+always come with their region, year and source, and where experts disagree, we
+show the range instead of picking one.
+
+We are part of a wider world of open knowledge. Where others already do something
+well, such as [Our World in Data](https://ourworldindata.org) for data and charts,
+we link to them rather than repeat them.
 
 Spotted an error or want to add something? Use the edit icon at the top of any page
 to suggest a change on [GitHub](https://github.com/buerlino/earthmania).

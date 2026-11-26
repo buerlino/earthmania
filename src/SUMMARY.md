@@ -2,6 +2,8 @@
 
 [Introduction](./intro.md)
 
-# Materials
-
-- [PET Plastic](./materials/pet.md)
+<!--
+  Only pages with status "reviewed" are listed here (see EDITORIAL.md).
+  Drafts in progress (not published):
+  - [PET Plastic](./materials/pet.md)
+-->
