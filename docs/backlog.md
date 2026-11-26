@@ -8,8 +8,8 @@ Policy and decisions: `EDITORIAL.md`. Rules for AI sessions: `CLAUDE.md`.
 - Scaffold, editorial direction (free-form connected nodes) and policy are in place.
 - No published content pages yet; `src/materials/pet.md` is a draft skeleton of
   open research questions.
-- Owner action pending: GitHub Settings → Pages → Source: **GitHub Actions**, then
-  re-run the deploy workflow and set the custom domain `earthmania.org`.
+- Live at https://earthmania.org (GitHub Pages via Actions, custom domain, HTTPS
+  enforced). Only the introduction is published so far.
 
 ## Next steps (in order; each step is shown to the owner before the next)
 
