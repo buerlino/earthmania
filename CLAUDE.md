@@ -45,20 +45,32 @@ How to write a page: [`_guidelines.md`](_guidelines.md).
 
 ## Roles
 
+- **The owner chooses, verifies and approves.** The owner names what to model and
+  its boundary, checks every claim against its source before it enters `data/`,
+  and gives the yes for each commit.
 - **The owner writes every page.** No agent writes, publishes or merges page prose.
-- **Research agent** (`.claude/agents/research.md`, planned): for a section the owner
-  names, returns a source dossier: primary sources first; for each source the
+- **Agents write code and model files** (`scripts/`, `crates/`, `models/`, CI), one
+  concern per change, with three checks: a test seen to fail before the change, a
+  review by a fresh session (never the one that wrote it), and one run against
+  real data before the code is relied on. Model files reference only claims the
+  owner has accepted into `data/`.
+- **Research agent** (`.claude/agents/research.md`): for a section or a set of
+  model flows the owner names, returns a source dossier: primary sources first; for each source the
   licence as seen on its page (and where), exact short quotes with their location,
   the data year and an archive link; and where sources disagree. Output is proposed
   entries for `data/sources.toml` and `data/claims.toml`, never prose. It may answer
   `BLOCKED: <why>`. WebFetch paraphrases, so exact text comes only from
-  `scripts/source-text` (planned).
-- **Fact-checker** (`.claude/agents/factcheck.md`, planned): a fresh, read-only
+  `scripts/source-text`.
+- **Fact-checker** (`.claude/agents/factcheck.md`): a fresh, read-only
   session, never the one that researched, started by the owner on a pull-request
   branch. It checks overstatement, scope, year, vague quantifiers and licence, and
-  replies `APPROVED` with the claim ids it checked, or `FIX` with at most five
+  replies `APPROVED` with the claim ids it checked (and, as `INCONCLUSIVE`, any it
+  could not check because the network failed), or `FIX` with at most five
   findings and evidence. It advises; the owner decides.
 - No unattended or scheduled agent runs.
+- **Oddities:** when something in the workflow goes wrong or surprises, add one
+  row to `docs/oddities.md` the same day (what happened, how it was caught, a
+  one-word cause, the fix).
 
 ## Publishing
 
@@ -72,22 +84,25 @@ How to write a page: [`_guidelines.md`](_guidelines.md).
 - **Plain mdBook only:** no preprocessors, plugins, custom theme or JavaScript.
   The one exception: embedded Our World in Data charts. Checks run in GitHub
   Actions and never change the site. Planned `models/` hold no sourced literals
-  (flows reference `data/claims.toml` IDs) and export committed Markdown fragments
-  under `src/_generated/` included via stock `{{#include}}` (`w4 export --check`
-  in PR CI); any chapter in `src/SUMMARY.md` may embed only verified models.
+  (flows reference `data/claims.toml` IDs) and export committed **tables-only**
+  Markdown fragments under `models/generated/` included via stock `{{#include}}`
+  (emitting footnote references `[^c-<claim-id>]` only; definitions stay
+  hand-written on the host page; `earthmania export --check` in PR CI). Any chapter in
+  `src/SUMMARY.md` may include only `verified` models.
 
 ## Commands
 
 ```bash
 mdbook build              # → book/ ; must be clean
 mdbook serve --open       # local preview; stop it when done
+python3 -B -m unittest scripts/test_source_text.py   # tests for scripts/source-text
 ```
 
 ## Layout
 
 `src/` (the book: `SUMMARY.md`, `intro.md`, `materials/`, `processes/`, `impacts/`,
-`systems/`, `_generated/` planned) · `_guidelines.md` · `EDITORIAL.md` ·
-`data/` (`sources.toml`, `claims.toml`, planned) · `models/` (declarative TOML
-models, planned) · `crates/` (`w4-core`, `w4-cli`, after backlog steps 1–3) ·
-`scripts/` (checks, planned) · `docs/` · `.github/workflows/`.
+`systems/`) · `_guidelines.md` · `EDITORIAL.md` · `data/` (`sources.toml`,
+`claims.toml`, planned) · `models/` (declarative TOML models and `generated/`
+table fragments, planned) · `crates/` (`earthmania-core`, `earthmania-cli`, after backlog
+steps 1–3) · `scripts/` (`source-text`; checks planned) · `docs/` · `.github/workflows/`.
 `docs/pollination/` is the N62 handover kit: local reference only, gitignored.
