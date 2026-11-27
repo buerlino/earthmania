@@ -7,7 +7,7 @@ gets a one-word cause, so repeated causes show up when the table is read back.
 Fixes to rules, prompts and scripts come out of this file.
 
 Causes used so far: `untested-path`, `silent-fallback`, `scope`, `status`,
-`memory`, `unverified`, `docs-drift`. Add a new word only when none fits.
+`memory`, `unverified`, `docs-drift`, `layout`. Add a new word only when none fits.
 
 | Date | What happened | How it was caught | Cause | Fix |
 |---|---|---|---|---|
@@ -19,3 +19,4 @@ Causes used so far: `untested-path`, `silent-fallback`, `scope`, `status`,
 | 2026-11-27 | A test fixture contained statistics that read like real figures (a collection rate, a year, a tonnage). | Fresh review of the test file. | `memory` | Fixture text is obviously fake ("widgets"). |
 | 2026-11-27 | An analysis recommended limiting an agent's shell commands through `.claude/settings.json`. Per the tool's documentation, allow rules there cannot do that. | Checked the documentation before acting. | `unverified` | Check a tool's documented behaviour before writing a rule that depends on it. |
 | 2026-11-27 | The fact-checker's reply format gained an `INCONCLUSIVE` line in its agent file but not in `CLAUDE.md`. | A second read of prompts and rules side by side. | `docs-drift` | Change a format in every file that states it, in the same edit. |
+| 2026-11-27 | `scripts/source-text` flattened a PDF table (BAFU 2024 overview), so the 63'300 t of the Textilien row appeared right after "PET-Getränkeflaschen". | Research agent rendered the archived page and checked the row by eye. | `layout` | When a number comes from a PDF table, check its row on the rendered page before proposing the claim. |

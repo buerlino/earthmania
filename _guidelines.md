@@ -94,8 +94,17 @@ starts with: `> **Stub:** this page is a short definition; a full page is planne
 - **Every sentence containing a digit** (years included) carries a claim footnote in
   that sentence. **Every paragraph** carries at least one footnote. Names that
   contain digits (CO2, PM2.5, nylon 6,6, standard numbers) don't count.
+- The home page, `src/intro.md`, is exempt from the paragraph rule: it describes
+  the project, not the world. Its sentences with digits and its factual
+  references (a book, a model, an organisation's work) are still cited.
 - Put the data year next to every number. Never show more precision than the
   source. Keep ranges as ranges. When good sources disagree, show both and say why.
+- **Write numbers in one house style** (ISO style), so a script can compare them
+  with the ledger without guessing: a decimal point (`1.3`), and numbers of
+  five or more digits before the point grouped in threes with a no-break space,
+  written `&nbsp;` (`40&nbsp;792`, shown as 40 792). Never use a comma or a
+  point to group digits. Years and numbers of four digits or fewer are not
+  grouped (`2024`, `4500`).
 - Avoid vague quantifiers ("most", "rarely", "common") unless a source supports them;
   the fact-checker looks for them.
 - Name an interested party (industry body, advocacy group) in the text when citing it.
@@ -125,6 +134,9 @@ Copy this to the bottom of each page:
 
 [^c-<claim-id>]: <Author or Organisation> (<publication date>). *<Title>*. <Publisher>.
     <URL> — archived <archive URL>, accessed <YYYY-MM-DD>. [via <aggregator URL>, if any]
+
+[^c-<claim-id>]: <Authors> (<year>). *<Title>*, <edition>. <Publisher>.
+    ISBN <isbn>, p. <page>. <!-- printed book without an open full text -->
 
 ## Attribution
 
