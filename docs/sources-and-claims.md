@@ -124,6 +124,10 @@ editions that restate the same year apart.
 An open full text that exists but has no snapshot yet is archived first; it
 never makes a book a source without a web copy.
 
+A book with no open full text can be cited for its title, year and contents
+through its library catalogue record, which is a web source (first row). Worked
+example: `data/sources/loc-lccn-2004000125-2016.toml`, cited in `src/intro.md`.
+
 Whenever a source has `archive`, its licence was seen on a web page:
 `licence_seen_at` is that page's URL and `licence_archive` is required.
 
@@ -143,7 +147,7 @@ Whenever a source has `archive`, its licence was seen on a web page:
 | `doi` | string | for papers, where one exists | A persistent name, not a copy of the text: it never replaces `archive`. |
 | `published` | string | yes | Publication or dataset release date (`"YYYY-MM-DD"` or `"YYYY"`), or `"unknown"`. |
 | `accessed` | string | yes | ISO date (`"YYYY-MM-DD"`) when the source was opened. |
-| `licence` | string | yes | Licence stated on the source itself (L in TASL), e.g. `"CC-BY-4.0"`, `"CC0-1.0"`, `"public-domain"`, `"all-rights-reserved"`. |
+| `licence` | string | yes | Licence stated on the source itself (L in TASL), e.g. `"CC-BY-4.0"`, `"CC0-1.0"`, `"public-domain"`, `"all-rights-reserved"`. `"none-stated"` when the source states no licence at all (e.g. a library catalogue record); treated like `"all-rights-reserved"`, so `use = "cite"`. |
 | `licence_seen_at` | string | yes | Exact URL where that licence statement was seen (always a URL when the source has `archive`); for a book without `archive`, the place in the copy (e.g. `"copyright page"`). |
 | `licence_archive` | string | if the source has `archive` | Wayback snapshot of the `licence_seen_at` page, full 14-digit timestamp, copied from an existing snapshot. Several sources may share one. |
 | `use` | `"cite" \| "adapted" \| "copied"` | yes | `"adapted"` and `"copied"` are allowed **only** for `CC0`, `public-domain`, `CC-BY` or `CC-BY-SA`. NC, ND and `all-rights-reserved` sources must use `"cite"`. |

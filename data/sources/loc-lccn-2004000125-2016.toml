@@ -1,0 +1,37 @@
+schema_version = "0.1"
+
+[source]
+title = "The limits to growth : the 30-year update"
+author = "Library of Congress"
+tier = "B"
+url = "https://lccn.loc.gov/2004000125/marcxml"
+archive = "https://web.archive.org/web/20161230191052/https://lccn.loc.gov/2004000125/marcxml"
+published = "2016-10-27"
+accessed = "2026-11-27"
+licence = "none-stated"
+licence_seen_at = "https://www.loc.gov/legal/"
+licence_archive = "https://web.archive.org/web/20261117182655/https://www.loc.gov/legal/"
+use = "cite"
+notes = "Library of Congress catalogue record (MARCXML) for LCCN 2004000125, describing the book Limits to Growth: The 30-Year Update (Meadows, Randers, Meadows). Used because no openly available full text of the book exists; a claim from the book itself can be added later as a separate source (printed book, match = manual). The record states no licence; the LoC legal page says the Library generally does not own the rights to materials in its collections. The HTML permalink capture shows only 'No Connections Available', so the MARCXML capture is used. MARC field tags in locators were read from the raw XML of the same capture. The record has no edition (250) field. published is the date of latest transaction in MARC field 005 (20161027134523.0) of the archived capture, i.e. the version of the record cited."
+
+[claims.loc-lccn-2004000125-2016--title-statement]
+basis = "quoted"
+kind = "statement"
+scope = "Title, subtitle and statement of responsibility of the book (LCCN 2004000125) as transcribed, in lowercase, in the Library of Congress catalogue record."
+locator = "MARC field 245 (title statement)"
+quote = "The limits to growth : the 30-year update / Donella Meadows, Jørgen Randers, and Dennis Meadows."
+
+[claims.loc-lccn-2004000125-2016--published-2004]
+basis = "quoted"
+kind = "statement"
+data_year = "2004"
+scope = "Place, publisher and copyright year of the book (LCCN 2004000125) as recorded by the Library of Congress."
+locator = "MARC field 260 (publication)"
+quote = "White River Junction, Vt : Chelsea Green Publishing Company, c2004."
+
+[claims.loc-lccn-2004000125-2016--world3-chapter]
+basis = "quoted"
+kind = "statement"
+scope = "The book (LCCN 2004000125) contains a chapter titled 'World3: the dynamics of growth in a finite world', according to the contents note of the Library of Congress record; chapter numbers and pages are not given."
+locator = "MARC field 505 (contents note)"
+quote = "The limits: sources and sinks -- World3: the dynamics of growth in a finite world -- Back from beyond the limits: the ozone story"
