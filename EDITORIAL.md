@@ -78,6 +78,17 @@ the page until verified.
 | Rules for code | **One concern per change, with three checks:** a test that is seen to fail before the change, a review by a fresh session (not the one that wrote it), and one run against real data before the code is relied on. Workflow oddities are logged in `docs/oddities.md` the day they happen. |
 | Sequencing | **Real claims before the tool.** The research trial runs on the first flows of the first model (PET bottles, Switzerland); the owner verifies those claims. Then the ledger checks, then the model tool (checking before export), then the first page. No `Cargo.toml`, `crates/` or CI changes before verified claims exist in `data/` (backlog steps 1–3). |
 | Licensing | `models/` follows `data/` under CC BY-SA 4.0; planned `Cargo.toml` and `crates/` follow code under MIT (see `LICENSE`). |
+| Ledger layout | **One file per source** (replaces the two-file layout named in "Provenance", "Ledger format" and "Quantitative models" above, decided before any claim was stored). Each source and the claims taken from it share one file; claim IDs stay global. Reason: a claim has exactly one source, and claims are checked source by source. The layout is described only in `docs/sources-and-claims.md`; other documents say "the ledger (`data/`)". |
+| Ledger IDs | **Fixed pattern, never renamed, reused or deleted.** Lowercase only. Source ID `<organisation>-<short-title>-<edition>` in the source's own language (transliterated), at most 32 characters, the edition always present: the year in the title; for a law, the year of the consolidated version; otherwise the `published` year; plus the month if two editions would still collide; claim ID `<source-id>--<what>`, with `<what>` at most 32 characters and ending in the claim's data year (before any `-r<n>`) when it has a single data year. A wrong claim is retired and replaced: `-r2`, `-r3` when the replacement states the same thing, a fresh ID when it states something else. A claim found to belong to another source is replaced, not moved; a new edition of a source is a new source. The core fields of a merged claim never change in place. |
+| Undated figures | **Recorded as `data_year = "undated"`**, never given a year the source did not state. Pages may cite them without implying a year; models may not use them. |
+| Footnote checks | **CI fails on any footnote problem**: a `[^c-…]` reference that is undefined or not in the ledger, and mdBook's warning for an unused footnote definition. (mdBook itself renders a mistyped footnote as plain text without a warning.) |
+| Sources without a web copy | **Printed books: ISBN, edition and page instead of an archive link**, checked by a person against the copy (`match = "manual"`). Where an openly available full text exists, it is archived as well. Papers keep an archived copy; their DOI is recorded where there is one. |
+| One-sided values | **Stored as printed** (`bound = "lower"` or `"upper"`), never closed with a number the source did not print, and only when the limit is about the claim's own value (a legal minimum is a point value). `>` and `≥` are treated alike. The model tool closes them by fixed rules that depend on use, labels each rule-supplied end, and rejects a lower-bound mass flow. |
+| Rounding in cross-checks | **Published values are compared within their printed rounding** (half a unit of the last printed digit), in model assertions only, one-sided values included, and every such pass is labelled. |
+| Further ledger checks | Disagreement links (`alternatives`) are checked in both directions; every number claim declares its number exactly as printed in the quote (`printed`, with `decimal_mark` and `group_mark`), and a script checks it by character rules only (no words or languages are matched, nothing is guessed), while people set and confirm `bound` and the marks; an ambiguous occurrence (the number appears twice in its quote, or next to another number) passes CI but is listed in the pull request for the fact-checker; the licence page is archived too (`licence_archive`); every claim in a changed source file is re-checked. |
+| Intro page | **`src/intro.md` is exempt from the footnote-per-paragraph rule**: it describes the project, not the world. Its sentences with digits and its factual references are still cited. |
+| Numbers on pages | **One house style, ISO style**: decimal point, and numbers of five or more digits grouped in threes with a no-break space (`40&nbsp;792`); never a comma or point as grouping mark; years and numbers of four digits or fewer ungrouped. The planned page check converts each number by this rule and compares it with its claim, without guessing. |
+| First model year | **The PET beverage bottle model (Switzerland) uses 2024**, the latest year for which all first flows are archived. BAFU's 2024 rate is printed as "> 84" in its table and "85" in its note; both are recorded as linked claims, and the owner asks BAFU. |
 
 ## Sources
 
@@ -93,7 +104,9 @@ the page until verified.
 ### Rules
 
 - Never cite a source that was not opened. Never cite from memory (human or AI).
-- Every source has an access date and an archive link (web.archive.org).
+- Every source has an access date and an archive link (web.archive.org). A
+  printed book with no open full text has its ISBN and edition instead, and its
+  claims are checked by hand against the copy.
 - Cite the primary producer of data; credit an aggregator as the route.
 - Restate facts in your own words.
 - When a source is wrong and a better one shows it, correct the page and report
@@ -112,8 +125,8 @@ the page until verified.
 ## Workflow
 
 1. **Pick a section** of a page (one pull request is one section).
-2. **Research.** The research agent returns a source dossier: proposed entries
-   for `data/sources.toml` and `data/claims.toml`, with exact quotes, locations,
+2. **Research.** The research agent returns a source dossier: proposed ledger
+   entries, one block per source file, with exact quotes, locations,
    data years, licences as seen and archive links, and where sources disagree.
 3. **Ledger first.** Review the proposed entries and add the ones you accept.
 4. **Write** the section by hand following `_guidelines.md`. Every claim footnote
