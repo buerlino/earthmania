@@ -1,4 +1,4 @@
-<!-- status: draft -->
+<!-- status: verified · verified: 2026-11-27 by buerlino (PR #2) -->
 
 <p align="center"><img src="images/logo.svg" alt="Earthmania logo: a globe with the letters EM" width="160"></p>
 
@@ -7,7 +7,7 @@
 
 **Earthmania** is a knowledge base mainly focused on natural and industrial material flows and processes regarding the sources and sinks of planet Earth.
 
-The idea came from two main influences: The presentation of the World3 model[^c-loc-lccn-2004000125-2016--world3-chapter] in the book *Limits to Growth: The 30-Year Update*[^c-loc-lccn-2004000125-2016--title-statement], and a university lecture on PET and PET-recycling in my bachelor's programme in energy and environmental engineering.
+The idea came from two main influences: The chapter on World3[^c-loc-lccn-2004000125-2016--world3-chapter] in the book *The Limits to Growth: The 30-Year Update*[^c-loc-lccn-2004000125-2016--title-statement], and a university lecture on PET and PET-recycling in my bachelor's programme in energy and environmental engineering.
 
 The Earthmania model is built from the bottom up. Every addition makes the model better, but it might only be useful after reaching a critical mass. Every number must be cited by source. A person checks every claim against the source before it reaches the model.
 
@@ -17,7 +17,7 @@ Any modelled part that depends on a material or process that is currently not mo
 
 Time will tell if this model will ever represent the real world in a meaningful way, but there is a chance it can. Earthmania is still under development, currently a first version is the target. First priority is the construction of the architecture. The PET example will be used as an early test to validate the architecture and iron out any missing details.
 
-Check the FAQ page for more details on the inner workings and structure of the Earthmania model. If you have any questions feel free to open an issue on GitHub: <https://github.com/buerlino/earthmania/issues>.
+Check the FAQ page<!-- planned: faq.md --> for more details on the inner workings and structure of the Earthmania model. If you have any questions feel free to open an issue on GitHub: <https://github.com/buerlino/earthmania/issues>.
 
 Artificial Intelligence will contribute massively to the creation of Earthmania: writing the code and model files, constructing the architecture and doing research. A person checks every claim against its source and the documentation is written by a human. AI models will then fact check the rigor and flag any remaining mistakes in the information against the source, and a human decides on the final outcome.
 
@@ -27,10 +27,10 @@ Buerlino
 
 ## Sources
 
-[^c-loc-lccn-2004000125-2016--title-statement]: Library of Congress (n.d.). *The limits to growth : the 30-year update* (Meadows, D., Randers, J., Meadows, D., Chelsea Green, 2004), catalogue record LCCN 2004000125.
+[^c-loc-lccn-2004000125-2016--title-statement]: Library of Congress (2016-10-27). *The limits to growth : the 30-year update* (Meadows, D., Randers, J., Meadows, D., Chelsea Green, 2004), catalogue record LCCN 2004000125.
     https://lccn.loc.gov/2004000125/marcxml — archived https://web.archive.org/web/20161230191052/https://lccn.loc.gov/2004000125/marcxml, accessed 2026-11-27.
 
-[^c-loc-lccn-2004000125-2016--world3-chapter]: Library of Congress (n.d.). *The limits to growth : the 30-year update* (Meadows, D., Randers, J., Meadows, D., Chelsea Green, 2004), catalogue record LCCN 2004000125, contents note.
+[^c-loc-lccn-2004000125-2016--world3-chapter]: Library of Congress (2016-10-27). *The limits to growth : the 30-year update* (Meadows, D., Randers, J., Meadows, D., Chelsea Green, 2004), catalogue record LCCN 2004000125, contents note.
     https://lccn.loc.gov/2004000125/marcxml — archived https://web.archive.org/web/20161230191052/https://lccn.loc.gov/2004000125/marcxml, accessed 2026-11-27.
 
 ---

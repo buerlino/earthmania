@@ -10,14 +10,16 @@ Policy and decisions: `EDITORIAL.md`. Rules for AI sessions: `CLAUDE.md`.
   `.claude/agents/factcheck.md` and `scripts/source-text` (offline tests pass;
   checked once by hand against a live Wayback snapshot). `docs/model-schema.md`
   is a draft for step 5. First used on a real claim on 2026-11-27 (the intro, below).
-- First ledger file and first cited page (2026-11-27, branch `docs/intro-rewrite`,
-  stacked on `docs/ledger-per-source`, not yet pushed): the owner rewrote
-  `src/intro.md`, citing *Limits to Growth: The 30-Year Update* through its
+- First ledger file and first cited page (2026-11-27, PR #2, stacked on the
+  ledger redesign in PR #1): the owner rewrote
+  `src/intro.md`, citing *The Limits to Growth: The 30-Year Update* through its
   Library of Congress catalogue record,
   `data/sources/loc-lccn-2004000125-2016.toml` (no open full text of the book
   exists). The owner checked the file against the archived record. This is the
-  worked example for citing a source. Next: push, PRs (redesign first),
-  fact-checker on the intro PR, status line `verified` with the PR number, merge.
+  worked example for citing a source. The fact-checker returned FIX (World3
+  "model" not supported by a chapter title; title article; footnote date;
+  planned marker); all fixed, status line set to `verified` (PR #2). Next: merge
+  #1, then #2.
 - Oddities are logged in `docs/oddities.md` from 2026-11-27, one row each, on
   the day they happen.
 - First research dossier returned (PET beverage bottles, Switzerland, reference
