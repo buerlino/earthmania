@@ -31,9 +31,9 @@ is credited on the page where it appears.
 2. Code and configuration: MIT License
 --------------------------------------
 
-All repository configuration, scripts, and workflows (including but not
-limited to `book.toml`, `.github/`, `.gitignore`, `scripts/`, and any
-build or helper scripts) are licensed under the MIT License:
+All repository configuration, Rust code, scripts, and workflows (including but
+not limited to `book.toml`, `Cargo.toml`, `crates/`, `.github/`, `.gitignore`,
+`scripts/`, and any build or helper scripts) are licensed under the MIT License:
 
   MIT License
 
@@ -62,8 +62,9 @@ build or helper scripts) are licensed under the MIT License:
 -------------------------
 
 Project documentation (`CLAUDE.md`, `EDITORIAL.md`, `_guidelines.md`, `README.md`,
-`docs/`) and the source and claims ledger in `data/` are licensed under CC BY-SA 4.0,
-like the content in `src/`.
+`docs/`), the source and claims ledger in `data/` (`sources.toml`, `claims.toml`),
+and declarative models in `models/` are licensed under CC BY-SA 4.0, like the
+content in `src/`.
 
 Exception: short quoted excerpts from third-party sources recorded in `data/`
 (the `quote` fields) remain the property of their respective rights holders. They

@@ -65,6 +65,16 @@ the page until verified.
 | Contributions | **Solo author for now, open for issues.** Anyone can report errors or suggest sources via GitHub issues. |
 | Handover kit | `docs/pollination/` (from the N62 project) is local reference only, never committed. |
 
+## Decisions (2026-11-27)
+
+| Topic | Decision |
+|---|---|
+| Ledger format | **Single TOML ledger (`data/sources.toml` + `data/claims.toml`)** replacing the planned YAML files; specification in `docs/sources-and-claims.md`. Shared by both prose in `src/` and models in `models/`. Verification remains in page status lines and pull-request text, never in the ledger. |
+| Quantitative models | **Declarative TOML models (`models/`), zero sourced literals.** Flows reference claim IDs in `data/claims.toml`, `share_of`, explicit `residual` flows (at most one per node, labelled "closed by residual"), or typed `sorry` holes. Processes default to goods-level `total_mass` with interval closure `[lo, hi]` and implied bounds printed for `sorry` holes. Standalone `models/reactions.toml` checks integer atom-count balance only in v0.1 (no stoichiometry-derived mass flows yet). |
+| Publishing models | **Plain mdBook only — still no preprocessors.** Planned `w4 export` (`crates/w4-core`, `crates/w4-cli`) writes committed Markdown fragments under `src/_generated/` carrying `[^c-<claim-id>]` footnotes and a generator header, pulled into pages via stock `{{#include}}`. Any chapter listed in `src/SUMMARY.md` (`stub` or `verified`) may embed only verified models (zero open `sorry` holes). `w4 export --check` in PR CI keeps fragments fresh. |
+| Sequencing | **Ledger and first verified PET section before Rust.** Finish backlog steps 1–3 (ledger format plus one verified PET section through the workflow) before creating `Cargo.toml`, `crates/` or CI changes. |
+| Licensing | `models/` follows `data/` under CC BY-SA 4.0; planned `Cargo.toml` and `crates/` follow code under MIT (see `LICENSE`). |
+
 ## Sources
 
 ### Source tiers
@@ -99,7 +109,7 @@ the page until verified.
 
 1. **Pick a section** of a page (one pull request is one section).
 2. **Research.** The research agent returns a source dossier: proposed entries
-   for `data/sources.yaml` and `data/claims.yaml`, with exact quotes, locations,
+   for `data/sources.toml` and `data/claims.toml`, with exact quotes, locations,
    data years, licences as seen and archive links, and where sources disagree.
 3. **Ledger first.** Review the proposed entries and add the ones you accept.
 4. **Write** the section by hand following `_guidelines.md`. Every claim footnote
