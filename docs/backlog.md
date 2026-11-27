@@ -9,12 +9,20 @@ Policy and decisions: `EDITORIAL.md`. Rules for AI sessions: `CLAUDE.md`.
 - Step 1 is in place: `docs/sources-and-claims.md`, `.claude/agents/research.md`,
   `.claude/agents/factcheck.md` and `scripts/source-text` (offline tests pass;
   checked once by hand against a live Wayback snapshot). `docs/model-schema.md`
-  is a draft for step 5. None of it has been used on a real claim yet.
+  is a draft for step 5. First used on a real claim on 2026-11-27 (the intro, below).
+- First ledger file and first cited page (2026-11-27, branch `docs/intro-rewrite`,
+  stacked on `docs/ledger-per-source`, not yet pushed): the owner rewrote
+  `src/intro.md`, citing *Limits to Growth: The 30-Year Update* through its
+  Library of Congress catalogue record,
+  `data/sources/loc-lccn-2004000125-2016.toml` (no open full text of the book
+  exists). The owner checked the file against the archived record. This is the
+  worked example for citing a source. Next: push, PRs (redesign first),
+  fact-checker on the intro PR, status line `verified` with the PR number, merge.
 - Oddities are logged in `docs/oddities.md` from 2026-11-27, one row each, on
   the day they happen.
 - First research dossier returned (PET beverage bottles, Switzerland, reference
   year 2024: placed on market, separately collected, recycling rate). Not yet
-  checked by the owner; nothing in `data/` yet.
+  checked by the owner; none of its claims are in `data/` yet.
 - Ledger design revised the same day, before any claim was stored (see
   `EDITORIAL.md`, 2026-11-27): one file per source, permanent IDs with the
   source ID as prefix, printed books by ISBN, `bound` for one-sided values,
@@ -79,6 +87,11 @@ Policy and decisions: `EDITORIAL.md`. Rules for AI sessions: `CLAUDE.md`.
 
 ## Ideas, not scheduled
 
+- FAQ page (owner writes it): how to read a page (footnotes, data years,
+  ranges), what draft, stub and verified mean, parked pages and planned markers.
+  The intro points to it; until it is published it stays plain text.
+- A source of *Limits to Growth: The 30-Year Update* itself (printed copy,
+  `match = "manual"`) to back the World3 claim directly, once the owner has a copy.
 - Issue forms for corrections and source suggestions.
 - A command that prints the canonical footnote line for a claim, so hand-written
   footnotes can be checked exactly against the ledger.

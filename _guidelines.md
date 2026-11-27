@@ -127,6 +127,11 @@ starts with: `> **Stub:** this page is a short definition; a full page is planne
 
 ## Sources and attribution block
 
+Each footnote marker used on a page needs its own definition, even when two
+claims come from the same source. The footnote marker sits directly after the
+word, with no space before it. Worked example: the `## Sources` block of
+`src/intro.md`, citing `data/sources/loc-lccn-2004000125-2016.toml`.
+
 Copy this to the bottom of each page:
 
 ```markdown
